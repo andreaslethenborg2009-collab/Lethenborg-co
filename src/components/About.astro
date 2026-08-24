@@ -1,0 +1,12 @@
+---
+import { site } from "../data/site.js";
+---
+
+<section id="om" class="bg-white py-20 md:py-28">
+	<div class="mx-auto max-w-2xl px-6">
+		<h2 class="font-heading text-3xl font-bold text-primary md:text-4xl">{site.about.heading}</h2>
+		{site.about.paragraphs.map((paragraph) => (
+			<p class="mt-6 text-stone-600">{paragraph}</p>
+		))}
+	</div>
+</section>

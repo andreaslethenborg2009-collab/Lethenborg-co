@@ -1,0 +1,29 @@
+---
+import { site } from "../data/site.js";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/10 bg-primary">
+	<div class="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2">
+		<div>
+			<p class="font-heading text-lg font-semibold text-white">{site.business.name}</p>
+			<p class="mt-3 text-sm text-stone-300">{site.business.area}</p>
+			<div class="mt-3 flex flex-col text-sm text-stone-300">
+				<a href={`tel:${site.business.phone.replace(/\s/g, "")}`} class="inline-block py-1 hover:text-accent">{site.business.phone}</a>
+				<a href={`mailto:${site.business.email}`} class="inline-block py-1 hover:text-accent">{site.business.email}</a>
+			</div>
+		</div>
+
+		<div>
+			<p class="font-heading font-semibold text-white">Info</p>
+			<div class="mt-3 flex flex-col gap-2 text-sm text-stone-300">
+				<a href="/privatlivspolitik" class="hover:text-accent">Privatlivspolitik</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="border-t border-white/10 px-6 py-6 text-center text-xs text-stone-400">
+		&copy; {year} {site.business.name}. {site.business.name} drives af {site.business.legalName}, CVR {site.business.cvr}.
+	</div>
+</footer>

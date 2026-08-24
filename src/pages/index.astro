@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import WhatYouGet from "../components/WhatYouGet.astro";
+import Process from "../components/Process.astro";
+import About from "../components/About.astro";
+import OnboardingQuiz from "../components/OnboardingQuiz.astro";
+import Footer from "../components/Footer.astro";
+import CookieBanner from "../components/CookieBanner.astro";
+---
+
+<BaseLayout
+	title="Hjemmesider til lokale virksomheder"
+	description="Lethenborg & Co bygger skræddersyede, hurtige hjemmesider til lokale virksomheder i Østjylland. Svar på et par spørgsmål, og få et forslag."
+>
+	<Header />
+	<main>
+		<Hero />
+		<WhatYouGet />
+		<Process />
+		<About />
+		<OnboardingQuiz />
+	</main>
+	<Footer />
+	<CookieBanner />
+</BaseLayout>
