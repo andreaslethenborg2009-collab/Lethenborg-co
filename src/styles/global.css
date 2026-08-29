@@ -7,3 +7,37 @@
 	--font-heading: "Manrope", sans-serif;
 	--font-body: "Inter", sans-serif;
 }
+
+.reveal {
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
+
+@keyframes quiz-step-in {
+	from {
+		opacity: 0;
+		transform: translateX(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.quiz-step:not(.hidden) {
+	animation: quiz-step-in 0.3s ease;
+}

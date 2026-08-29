@@ -2,8 +2,14 @@
 import { site } from "../data/site.js";
 ---
 
-<section class="bg-primary">
-	<div class="mx-auto max-w-4xl px-6 py-24 text-center md:py-32">
+<section class="relative overflow-hidden bg-primary">
+	<div
+		class="pointer-events-none absolute left-1/2 top-0 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-accent/20 blur-3xl"
+		aria-hidden="true"
+	>
+	</div>
+
+	<div class="relative mx-auto max-w-4xl px-6 py-24 text-center md:py-32">
 		<h1 class="font-heading text-4xl font-extrabold leading-tight text-white md:text-5xl">
 			{site.business.tagline}
 		</h1>
@@ -14,7 +20,7 @@ import { site } from "../data/site.js";
 		<div class="mt-10">
 			<a
 				href="#kom-i-gang"
-				class="inline-block rounded-full bg-accent px-8 py-3.5 font-semibold text-primary shadow-lg transition-colors hover:bg-accent/90"
+				class="inline-block rounded-full bg-accent px-8 py-3.5 font-semibold text-primary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/90 hover:shadow-xl"
 			>
 				Kom i gang
 			</a>

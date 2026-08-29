@@ -10,10 +10,15 @@ import { site } from "../data/site.js";
 		</div>
 
 		<div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-			{site.process.map((item) => (
-				<div>
-					<span class="font-heading text-3xl font-extrabold text-accent">{item.step}</span>
-					<h3 class="mt-3 font-heading text-lg font-semibold text-primary">{item.title}</h3>
+			{site.process.map((item, i) => (
+				<div class="reveal group relative">
+					{i !== site.process.length - 1 && (
+						<div class="absolute left-6 top-6 hidden h-0.5 w-full bg-stone-200 lg:block" aria-hidden="true"></div>
+					)}
+					<div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary font-heading text-lg font-bold text-accent transition-transform duration-300 group-hover:scale-110">
+						{item.step}
+					</div>
+					<h3 class="mt-5 font-heading text-lg font-semibold text-primary">{item.title}</h3>
 					<p class="mt-2 text-stone-600">{item.description}</p>
 				</div>
 			))}
