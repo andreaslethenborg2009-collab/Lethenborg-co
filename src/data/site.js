@@ -9,7 +9,7 @@ export const site = {
 		cvr: "46710150",
 		tagline: "Hjemmesider bygget af én person, der selv står for hele arbejdet",
 		phone: "81 72 62 62",
-		email: "kontakt@lethenborg-co.dk",
+		email: "kontakt@lethenborg.dk",
 		area: "Ry, Østjylland",
 	},
 

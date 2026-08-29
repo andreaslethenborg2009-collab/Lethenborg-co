@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lethenborg-co.netlify.app',
+  site: 'https://lethenborg.dk',
 
   vite: {
     plugins: [tailwindcss()]
