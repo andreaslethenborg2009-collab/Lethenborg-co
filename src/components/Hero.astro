@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { site } from "../data/site.js";
+import workspaceImage from "../assets/images/workspace.jpg";
 ---
 
 <section class="relative overflow-hidden bg-primary">
@@ -9,21 +11,33 @@ import { site } from "../data/site.js";
 	>
 	</div>
 
-	<div class="relative mx-auto max-w-4xl px-6 py-24 text-center md:py-32">
-		<h1 class="font-heading text-4xl font-extrabold leading-tight text-white md:text-5xl">
-			{site.business.tagline}
-		</h1>
-		<p class="mx-auto mt-6 max-w-xl text-lg text-stone-300">
-			Ingen skabeloner, ingen mellemled. Fortæl mig om din virksomhed, og få et konkret forslag —
-			ikke et gæt.
-		</p>
-		<div class="mt-10">
-			<a
-				href="#kom-i-gang"
-				class="inline-block rounded-full bg-accent px-8 py-3.5 font-semibold text-primary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/90 hover:shadow-xl"
-			>
-				Kom i gang
-			</a>
+	<div class="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-32">
+		<div class="text-center md:text-left">
+			<h1 class="font-heading text-4xl font-extrabold leading-tight text-white md:text-5xl">
+				{site.business.tagline}
+			</h1>
+			<p class="mx-auto mt-6 max-w-xl text-lg text-stone-300 md:mx-0">
+				Ingen skabeloner, ingen mellemled. Fortæl mig om din virksomhed, og få et konkret forslag —
+				ikke et gæt.
+			</p>
+			<div class="mt-10">
+				<a
+					href="#kom-i-gang"
+					class="inline-block rounded-full bg-accent px-8 py-3.5 font-semibold text-primary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/90 hover:shadow-xl"
+				>
+					Kom i gang
+				</a>
+			</div>
+		</div>
+
+		<div class="hidden md:block">
+			<Image
+				src={workspaceImage}
+				alt="Bærbar computer på et skrivebord"
+				width={1000}
+				height={667}
+				class="w-full rounded-3xl object-cover shadow-2xl"
+			/>
 		</div>
 	</div>
 </section>
