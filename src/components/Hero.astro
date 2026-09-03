@@ -1,43 +1,50 @@
 ---
-import { Image } from "astro:assets";
 import { site } from "../data/site.js";
-import workspaceImage from "../assets/images/workspace.jpg";
 ---
 
-<section class="relative overflow-hidden bg-primary">
-	<div
-		class="pointer-events-none absolute left-1/2 top-0 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-accent/20 blur-3xl"
-		aria-hidden="true"
-	>
-	</div>
-
-	<div class="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-32">
-		<div class="text-center md:text-left">
-			<h1 class="font-heading text-4xl font-extrabold leading-tight text-white md:text-5xl">
+<section class="relative flex min-h-screen items-center bg-navy">
+	<div class="relative mx-auto grid w-full max-w-6xl gap-12 px-6 py-32 md:grid-cols-12 md:items-center">
+		<div class="md:col-span-7">
+			<p class="reveal font-body text-xs font-normal uppercase tracking-[0.2em] text-gold">
+				Webbureau &middot; {site.business.area}
+			</p>
+			<h1
+				class="reveal mt-6 font-heading text-5xl font-normal leading-[1.1] text-warm md:text-6xl lg:text-7xl"
+				style="transition-delay: 150ms;"
+			>
 				{site.business.tagline}
 			</h1>
-			<p class="mx-auto mt-6 max-w-xl text-lg text-stone-300 md:mx-0">
+			<p
+				class="reveal mt-6 max-w-[34ch] text-base font-light leading-relaxed text-mist md:text-lg"
+				style="transition-delay: 300ms;"
+			>
 				Ingen skabeloner, ingen mellemled. Fortæl mig om din virksomhed, og få et konkret forslag —
 				ikke et gæt.
 			</p>
-			<div class="mt-10">
+			<div class="reveal mt-10" style="transition-delay: 450ms;">
 				<a
 					href="#kom-i-gang"
-					class="inline-block rounded-full bg-accent px-8 py-3.5 font-semibold text-primary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/90 hover:shadow-xl"
+					class="btn-arrow group inline-flex items-center gap-2 rounded-full border border-gold px-8 py-3.5 font-normal text-gold transition-colors duration-200 hover:bg-gold hover:text-navy"
 				>
 					Kom i gang
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-4 w-4">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+					</svg>
 				</a>
 			</div>
 		</div>
 
-		<div class="hidden md:block">
-			<Image
-				src={workspaceImage}
-				alt="Bærbar computer på et skrivebord"
-				width={1000}
-				height={667}
-				class="w-full rounded-3xl object-cover shadow-2xl"
-			/>
+		<div class="hidden md:col-span-5 md:flex md:items-center md:justify-center" aria-hidden="true">
+			<svg viewBox="0 0 400 400" class="reveal h-auto w-full max-w-sm" style="transition-delay: 250ms;">
+				<circle cx="200" cy="200" r="160" fill="none" stroke="#C9A227" stroke-width="0.75" opacity="0.35" />
+				<circle cx="200" cy="200" r="115" fill="none" stroke="#3D5A80" stroke-width="0.75" opacity="0.5" />
+				<circle cx="200" cy="200" r="70" fill="none" stroke="#C9A227" stroke-width="1" opacity="0.6" />
+				<line x1="200" y1="20" x2="200" y2="90" stroke="#C9A227" stroke-width="0.75" opacity="0.5" />
+				<line x1="200" y1="310" x2="200" y2="380" stroke="#3D5A80" stroke-width="0.75" opacity="0.5" />
+				<line x1="20" y1="200" x2="90" y2="200" stroke="#3D5A80" stroke-width="0.75" opacity="0.5" />
+				<line x1="310" y1="200" x2="380" y2="200" stroke="#C9A227" stroke-width="0.75" opacity="0.5" />
+				<circle cx="200" cy="200" r="3" fill="#C9A227" />
+			</svg>
 		</div>
 	</div>
 </section>

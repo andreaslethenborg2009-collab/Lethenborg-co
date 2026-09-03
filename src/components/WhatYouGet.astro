@@ -1,35 +1,31 @@
 ---
 import { site } from "../data/site.js";
-
-const icons = [
-	// skræddersyet — sliders/adjustments
-	"M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m9 12h3.75m-3.75 0a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0m-9 0H12M5.25 12H3.75m1.5 0a1.5 1.5 0 1 0 3 0m-3 0a1.5 1.5 0 1 1 3 0m9 0h6.75",
-	// hurtig — lightning bolt
-	"M3.75 13.5 9.75 3v6.75h10.5L14.25 21v-6.75H3.75Z",
-	// tilgængelig/SEO — magnifying glass
-	"M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z",
-	// GDPR — shield check
-	"M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
-];
 ---
 
-<section id="hvad-du-faar" class="bg-white py-20 md:py-28">
+<section id="hvad-du-faar" class="bg-warm py-30 md:py-40">
 	<div class="mx-auto max-w-6xl px-6">
-		<div class="mx-auto max-w-2xl text-center">
-			<h2 class="font-heading text-3xl font-bold text-primary md:text-4xl">Hvad du får</h2>
-			<p class="mt-4 text-stone-600">Ingen pakkeliste med ti ydelser — kun det, der rent faktisk gør en forskel.</p>
+		<div class="grid gap-8 md:grid-cols-12">
+			<div class="md:col-span-7">
+				<h2 class="reveal font-heading text-3xl font-normal text-navy md:text-4xl">
+					Det, der rent faktisk gør en forskel
+				</h2>
+				<p class="reveal mt-4 max-w-[48ch] text-base font-light leading-relaxed text-navy/70" style="transition-delay: 100ms;">
+					Ingen pakkeliste med ti ydelser — kun det, der rent faktisk gør en forskel.
+				</p>
+			</div>
 		</div>
 
-		<div class="mt-14 grid gap-8 sm:grid-cols-2">
+		<div class="mt-16 border-t border-navy/10">
 			{site.whatYouGet.map((item, i) => (
-				<div class="reveal group rounded-2xl border border-stone-100 bg-stone-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg">
-					<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-accent transition-colors group-hover:bg-accent group-hover:text-primary">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d={icons[i]} />
-						</svg>
+				<div
+					class="reveal grid gap-4 border-b border-navy/10 py-10 md:grid-cols-12 md:items-baseline md:gap-8"
+					style={`transition-delay: ${i * 100}ms`}
+				>
+					<div class="md:col-span-2">
+						<span class="font-heading text-3xl font-normal text-gold">{String(i + 1).padStart(2, "0")}</span>
 					</div>
-					<h3 class="mt-5 font-heading text-lg font-semibold text-primary">{item.title}</h3>
-					<p class="mt-3 text-stone-600">{item.description}</p>
+					<h3 class="font-heading text-xl font-normal text-navy md:col-span-4">{item.title}</h3>
+					<p class="text-base font-light leading-relaxed text-navy/70 md:col-span-6">{item.description}</p>
 				</div>
 			))}
 		</div>

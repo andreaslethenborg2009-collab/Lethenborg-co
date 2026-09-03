@@ -8,23 +8,23 @@ const navLinks = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-primary/95 backdrop-blur">
+<header class="sticky top-0 z-50 bg-navy/95 backdrop-blur">
 	<div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-		<a href="#" class="font-heading text-xl font-bold text-white">
+		<a href="#" class="font-heading text-xl font-medium text-warm">
 			{site.business.name}
 		</a>
 
 		<nav class="hidden md:block">
-			<ul class="flex items-center gap-8 text-sm font-medium text-stone-200">
+			<ul class="flex items-center gap-8 text-sm font-light text-mist">
 				{navLinks.map((link) => (
 					<li>
-						<a href={link.href} class="transition-colors hover:text-accent">{link.label}</a>
+						<a href={link.href} class="link-underline transition-colors hover:text-gold">{link.label}</a>
 					</li>
 				))}
 				<li>
 					<a
 						href="#kom-i-gang"
-						class="rounded-full bg-accent px-5 py-2 font-semibold text-primary transition-colors hover:bg-accent/90"
+						class="rounded-full border border-gold px-5 py-2 font-normal text-gold transition-colors hover:bg-gold hover:text-navy"
 					>
 						Kom i gang
 					</a>
@@ -39,23 +39,23 @@ const navLinks = [
 			aria-expanded="false"
 			class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
 		>
-			<span class="h-0.5 w-6 bg-white transition-transform"></span>
-			<span class="h-0.5 w-6 bg-white transition-opacity"></span>
-			<span class="h-0.5 w-6 bg-white transition-transform"></span>
+			<span class="h-0.5 w-6 bg-warm transition-transform"></span>
+			<span class="h-0.5 w-6 bg-warm transition-opacity"></span>
+			<span class="h-0.5 w-6 bg-warm transition-transform"></span>
 		</button>
 	</div>
 
-	<nav id="mobile-menu" class="hidden border-t border-white/10 md:hidden">
-		<ul class="flex flex-col gap-1 px-6 py-4 text-sm font-medium text-stone-200">
+	<nav id="mobile-menu" class="hidden border-t border-gold/10 md:hidden">
+		<ul class="flex flex-col gap-1 px-6 py-4 text-sm font-light text-mist">
 			{navLinks.map((link) => (
 				<li>
-					<a href={link.href} class="block py-2 transition-colors hover:text-accent">{link.label}</a>
+					<a href={link.href} class="block py-2 transition-colors hover:text-gold">{link.label}</a>
 				</li>
 			))}
 			<li class="pt-2">
 				<a
 					href="#kom-i-gang"
-					class="block rounded-full bg-accent px-5 py-2 text-center font-semibold text-primary"
+					class="block rounded-full border border-gold px-5 py-2 text-center font-normal text-gold"
 				>
 					Kom i gang
 				</a>

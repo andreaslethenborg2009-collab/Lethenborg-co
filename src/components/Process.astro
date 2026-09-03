@@ -2,26 +2,31 @@
 import { site } from "../data/site.js";
 ---
 
-<section id="saadan-arbejder-jeg" class="bg-stone-50 py-20 md:py-28">
+<section id="saadan-arbejder-jeg" class="bg-navy py-30 md:py-40">
 	<div class="mx-auto max-w-6xl px-6">
-		<div class="mx-auto max-w-2xl text-center">
-			<h2 class="font-heading text-3xl font-bold text-primary md:text-4xl">Sådan arbejder jeg</h2>
-			<p class="mt-4 text-stone-600">Fire trin, ingen overraskelser undervejs.</p>
+		<div class="grid gap-8 md:grid-cols-12">
+			<div class="md:col-span-7">
+				<h2 class="reveal font-heading text-3xl font-normal text-warm md:text-4xl">Sådan går det til</h2>
+				<p class="reveal mt-4 max-w-[48ch] text-base font-light leading-relaxed text-mist" style="transition-delay: 100ms;">
+					Fire trin, ingen overraskelser undervejs.
+				</p>
+			</div>
 		</div>
 
-		<div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-			{site.process.map((item, i) => (
-				<div class="reveal group relative">
-					{i !== site.process.length - 1 && (
-						<div class="absolute left-6 top-6 hidden h-0.5 w-full bg-stone-200 lg:block" aria-hidden="true"></div>
-					)}
-					<div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary font-heading text-lg font-bold text-accent transition-transform duration-300 group-hover:scale-110">
-						{item.step}
+		<div class="relative mt-20">
+			<div class="absolute left-0 right-0 top-[30px] hidden h-px bg-gold/20 md:block" aria-hidden="true"></div>
+
+			<div class="grid gap-12 md:grid-cols-4 md:gap-10">
+				{site.process.map((item, i) => (
+					<div class="reveal relative" style={`transition-delay: ${i * 120}ms`}>
+						<span class="relative z-10 inline-block bg-navy pr-5 font-heading text-5xl font-normal text-gold md:text-6xl">
+							{item.step.padStart(2, "0")}
+						</span>
+						<h3 class="mt-6 font-heading text-lg font-normal text-warm">{item.title}</h3>
+						<p class="mt-3 text-base font-light leading-relaxed text-mist">{item.description}</p>
 					</div>
-					<h3 class="mt-5 font-heading text-lg font-semibold text-primary">{item.title}</h3>
-					<p class="mt-2 text-stone-600">{item.description}</p>
-				</div>
-			))}
+				))}
+			</div>
 		</div>
 	</div>
 </section>
