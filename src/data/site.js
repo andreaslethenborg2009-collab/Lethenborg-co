@@ -1,5 +1,4 @@
 // TODO før launch:
-// - email: skift til firmamail, når den er klar
 // - Web3Forms access key i OnboardingQuiz.astro (se ContactForm-mønster fra Frisør Sofie-projektet)
 
 export const site = {
@@ -9,7 +8,7 @@ export const site = {
 		cvr: "46710150",
 		tagline: "Hjemmesider bygget af én person, der selv står for hele arbejdet",
 		phone: "81 72 62 62",
-		email: "kontakt@lethenborg.dk",
+		email: "andreas@lethenborg.dk",
 		area: "Ry, Østjylland",
 	},
 
