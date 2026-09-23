@@ -14,7 +14,13 @@ const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "ProfessionalService",
 	name: site.business.name,
+	url: Astro.site?.href,
 	description: site.business.tagline,
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Ry",
+		addressCountry: "DK",
+	},
 	telephone: site.business.phone,
 	email: site.business.email,
 	areaServed: site.business.area,

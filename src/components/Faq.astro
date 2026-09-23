@@ -1,0 +1,47 @@
+---
+import { site } from "../data/site.js";
+
+const faqJsonLd = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: site.faq.map((item) => ({
+		"@type": "Question",
+		name: item.question,
+		acceptedAnswer: { "@type": "Answer", text: item.answer },
+	})),
+};
+---
+
+<section id="faq" class="bg-warm py-30 md:py-40">
+	<div class="mx-auto max-w-6xl px-6">
+		<div class="grid gap-12 md:grid-cols-12 md:gap-16">
+			<div class="md:col-span-4">
+				<p class="reveal font-body text-xs font-normal uppercase tracking-[0.2em] text-gold">FAQ</p>
+				<h2 class="reveal mt-4 font-heading text-3xl font-normal text-navy md:text-4xl" style="transition-delay: 100ms;">
+					Ofte stillede spørgsmål
+				</h2>
+				<p class="reveal mt-4 text-base font-light leading-relaxed text-navy/70" style="transition-delay: 150ms;">
+					Står dit spørgsmål her ikke? Ring på
+					<a href={`tel:${site.business.phone.replace(/\s/g, "")}`} class="link-underline hover:text-gold">{site.business.phone}</a>.
+				</p>
+			</div>
+
+			<div class="border-t border-navy/10 md:col-span-8">
+				{site.faq.map((item) => (
+					<details class="faq-item group border-b border-navy/10">
+						<summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-heading text-lg font-normal text-navy transition-colors hover:text-gold">
+							{item.question}
+							<span class="relative h-4 w-4 shrink-0" aria-hidden="true">
+								<span class="absolute left-0 top-1/2 h-px w-4 bg-gold"></span>
+								<span class="absolute left-1/2 top-0 h-4 w-px bg-gold transition-transform duration-200 group-open:scale-y-0"></span>
+							</span>
+						</summary>
+						<p class="max-w-[62ch] pb-6 text-base font-light leading-relaxed text-navy/70">{item.answer}</p>
+					</details>
+				))}
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />

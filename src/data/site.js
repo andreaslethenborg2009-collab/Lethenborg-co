@@ -1,6 +1,3 @@
-// TODO før launch:
-// - Web3Forms access key i OnboardingQuiz.astro (se ContactForm-mønster fra Frisør Sofie-projektet)
-
 export const site = {
 	business: {
 		name: "Lethenborg & Co",
@@ -51,6 +48,73 @@ export const site = {
 			step: "4",
 			title: "Sitet går i luften",
 			description: "Hurtigt, testet, og uden bøvl for dig.",
+		},
+	],
+
+	work: [
+		{
+			name: "Frisør Sofie",
+			label: "Demo-projekt · Frisør",
+			url: "https://frisor-sofie-demo.netlify.app",
+			description:
+				"En komplet hjemmeside til en lokal frisørsalon — bygget som demo for at vise, hvordan en hjemmeside til en lille lokal virksomhed kan se ud og fungere.",
+			highlights: [
+				"Priser, åbningstider og kontakt samlet ét sted",
+				"Kontaktformular, der sender direkte til indbakken",
+				"Billeder optimeret til hurtig indlæsning på mobil",
+				"Cookie-samtykke og privatlivspolitik fra start",
+			],
+		},
+	],
+
+	payment: [
+		{
+			share: "50%",
+			title: "Ved opstart",
+			description: "Når vi har aftalt, hvad der skal laves, og hvad det koster, betaler du første halvdel. Så går arbejdet i gang.",
+		},
+		{
+			share: "50%",
+			title: "Ved levering",
+			description: "Anden halvdel betaler du, når hjemmesiden er færdig og gennemgået sammen med dig.",
+		},
+	],
+
+	faq: [
+		{
+			question: "Hvad koster en hjemmeside?",
+			answer:
+				"Det afhænger af, hvor mange sider du har brug for, og om tekst og billeder er klar. Svar på de korte spørgsmål nederst på siden, så vender jeg personligt tilbage med en konkret pris — det koster ikke noget at spørge.",
+		},
+		{
+			question: "Hvordan foregår betalingen?",
+			answer:
+				"Betalingen deles i to: 50% ved opstart og 50% ved levering, når hjemmesiden er færdig og gennemgået sammen med dig.",
+		},
+		{
+			question: "Hvem laver min hjemmeside?",
+			answer:
+				"Det gør jeg selv. Lethenborg & Co er et lille webbureau i Ry, så du taler direkte med den, der bygger din hjemmeside — ingen sælgere eller mellemled.",
+		},
+		{
+			question: "Jeg har ikke tekst og billeder klar — er det et problem?",
+			answer:
+				"Nej. Fortæl det i spørgsmålene, så tager vi højde for det i forslaget og finder en løsning sammen.",
+		},
+		{
+			question: "Kan min hjemmeside findes på Google?",
+			answer:
+				"Hjemmesiden bygges SEO-klar: hurtig indlæsning, korrekt struktur og de tekniske detaljer, som søgemaskiner læser. Det giver det bedste udgangspunkt for at blive fundet.",
+		},
+		{
+			question: "Fungerer hjemmesiden på mobilen?",
+			answer:
+				"Ja. Hjemmesiden bygges til at fungere på mobil, tablet og computer — de fleste af dine kunder vil se den på en telefon først.",
+		},
+		{
+			question: "Hvad med cookies og GDPR?",
+			answer:
+				"Cookie-samtykke og privatlivspolitik er en del af leverancen, så du ikke selv skal finde ud af det bagefter.",
 		},
 	],
 

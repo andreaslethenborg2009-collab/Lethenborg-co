@@ -67,6 +67,10 @@ html {
 	transform: translateX(4px);
 }
 
+.faq-item summary::-webkit-details-marker {
+	display: none;
+}
+
 @keyframes quiz-step-in {
 	from {
 		opacity: 0;

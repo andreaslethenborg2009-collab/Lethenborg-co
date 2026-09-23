@@ -28,5 +28,21 @@ import { site } from "../data/site.js";
 				))}
 			</div>
 		</div>
+
+		<div class="mt-24 grid gap-12 border-t border-gold/15 pt-16 md:grid-cols-12 md:gap-10">
+			<div class="md:col-span-4">
+				<h3 class="reveal font-heading text-2xl font-normal text-warm">Betaling i to dele</h3>
+				<p class="reveal mt-3 max-w-[36ch] text-base font-light leading-relaxed text-mist" style="transition-delay: 100ms;">
+					Du betaler ikke det hele på forhånd.
+				</p>
+			</div>
+			{site.payment.map((item, i) => (
+				<div class="reveal md:col-span-4" style={`transition-delay: ${150 + i * 100}ms`}>
+					<span class="font-heading text-5xl font-normal text-gold">{item.share}</span>
+					<p class="mt-4 font-heading text-lg font-normal text-warm">{item.title}</p>
+					<p class="mt-2 text-base font-light leading-relaxed text-mist">{item.description}</p>
+				</div>
+			))}
+		</div>
 	</div>
 </section>
